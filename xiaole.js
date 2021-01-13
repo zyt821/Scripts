@@ -51,7 +51,7 @@ http-request https:\/\/minapp\.xqrobot\.net\/* script-path=https://raw.githubuse
 const $ = Env("小乐");
 $.idx = ($.idx = ($.getval('xlSuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : ''; // 账号扩展字符
 const notify = $.isNode() ? require("./sendNotify") : ``;
-const COOKIE = $.isNode() ? require("./xiaoleCOOKIE") : ``;
+//const COOKIE = $.isNode() ? require("./xiaoleCOOKIE") : ``;
 const logs = 0; // 0为关闭日志，1为开启
 const notifyttt = 1// 0为关闭外部推送，1为12 23 点外部推送
 const notifyInterval = 1;// 0为关闭通知，1为所有通知，
