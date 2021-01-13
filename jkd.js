@@ -8,7 +8,7 @@ JKD_FAKE_IOS 将安卓cookie伪装成iOS 默认伪装，填写任意值
 [task_local]	
 0,30 7-22/1 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jkd.js, tag=聚看点	
 [rewrite_local]	
-https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action url script-request-body https://raw.githubusercontent.com/shylocks/Loon/main/jkd.js	
+https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action url script-request-body https://raw.githubusercontent.com/zyt821/Scripts/main/jkd.js	
 ================Loon==============	
 [Script]	
 http-request https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action  script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jkd.js, requires-body=true, timeout=100, tag=聚看点	
