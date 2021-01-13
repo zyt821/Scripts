@@ -1,4 +1,4 @@
-name: 笑谱
+name: 小乐优卷
 
 on:
   workflow_dispatch:
