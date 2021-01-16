@@ -1,4 +1,4 @@
-name: 百度极速版zyt
+name: 百度极速版lzf
 on:
   workflow_dispatch:
   schedule:
