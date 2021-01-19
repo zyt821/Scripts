@@ -7,7 +7,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: chonghua.js
+    types: BBB.js
 jobs:
   build:
 
@@ -25,7 +25,7 @@ jobs:
           npm install
       - name: '运行 【步步宝账户1】'
         run: |
-          node chonghua.js
+          node BBB.js
         env:
           BBB_CK: ${{ secrets.BBB_CK }}  
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
