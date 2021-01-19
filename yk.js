@@ -62,7 +62,7 @@ if (typeof $request !== 'undefined') {
       $.log($.name, '当前不在执行时间段,将为您查询账户余额！')
    }
    if (now.getHours() == 0){
-      await withDraw();
+      //await withDraw();
    }if (now.getHours() >= 7 && now.getHours() <=10 ){//日常任务及普通任务执行时间7-11点
    if (now.getHours() === 7 && now.getMinutes() < 30){//签到时间 7:30之前
       await signIn();
