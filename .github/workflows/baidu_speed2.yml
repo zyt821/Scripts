@@ -1,8 +1,8 @@
-name: 百度极速版LZF
+name: 百度极速版lzf
 on:
   workflow_dispatch:
   schedule:
-     - cron: '30 10,11,12,13 * * *'
+     - cron: '20 6-22 * * *'
   watch:
     types: started
 jobs:
@@ -25,7 +25,7 @@ jobs:
       - name: '运行 【百度极速】'
         if: env.BAIDU_COOKIELZF
         run: |
-          node baidu_speed125.js
+          node Task/baidu_speed125.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
