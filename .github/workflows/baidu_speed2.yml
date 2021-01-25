@@ -23,7 +23,7 @@ jobs:
         run: |
           npm install
       - name: '运行 【百度极速】'
-        if: env.BAIDU_COOKIELZF
+        if: env.BAIDU_COOKIE
         run: |
           node baidu_speed125.js
         env:
