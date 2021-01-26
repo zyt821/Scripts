@@ -10,7 +10,7 @@ const $ = new Env('百度极速版')
 
 let CookieArr = [];
 let UA = `Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SP-engine/2.24.0 info baiduboxapp/5.1.1.10 (Baidu; P2 14.2)`;
-const withcash = $.getdata("cash_baidu")||30;
+const withcash = $.getdata("cash_baidu")||5;
 let tip = 0,totaltips=0;
 if ($.isNode()) {
   if (process.env.BAIDU_COOKIE && process.env.BAIDU_COOKIE.indexOf('&') > -1) {
@@ -71,7 +71,7 @@ function getsign() {
             if (get_sign.errno == 0) {
                 $.desc = get_sign.data.tips+` 收益: $ {get_sign.data.bonus.coin}💰\n`;
                 $.log($.desc+"\n"+data);
-                await invite()
+                //await invite()
             } else if (get_sign.errno == 10053) {
                 $.desc = "【签到结果】"+get_sign.msg+"\n"
                 $.log( "签到结果: "+ $.desc)
