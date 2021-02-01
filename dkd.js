@@ -67,10 +67,13 @@ function dkdck() {
    if ($request.url.indexOf("index") > -1) {
     $.setdata(JSON.stringify($request.url),'dkdurl')
 	$.log(`多看点url获取成功,dkdurl: ${dkdurl}`)
+	   $.msg(`dkdurl: 成功🎉`, ``)
     $.setdata(JSON.stringify($request.headers),'dkdhd')
 	$.log(`多看点headers获取成功,dkdhd: ${dkdhd}`)
+	   $.msg(`dkdhd: 成功🎉`, ``)
     $.setdata($request.body,'dkdbody')
 	$.log(`多看点body获取成功, dkdbody: ${dkdbody}`)
+	   $.msg(`dkdbody: 成功🎉`, ``)
     }
   }
 //多看点提现ck
