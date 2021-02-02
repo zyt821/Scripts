@@ -209,7 +209,7 @@ if (!signheaderArr[0]) {
       console.log(`\n开始【抖音极速版${$.index}】`)
       console.log(signheader)
       console.log(`\n`)
-      console.log(signcookier)
+      console.log(signcookie)
       console.log(`\n`)
       console.log(readheader)
       console.log(`\n`)
