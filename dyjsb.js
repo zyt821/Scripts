@@ -207,6 +207,10 @@ if (!signheaderArr[0]) {
       readkey = readkeyArr[i];
       $.index = i + 1;
       console.log(`\n开始【抖音极速版${$.index}】`)
+      console.log(`${$.signheader}`)
+      console.log(`${$.signcookier}`)
+      console.log(`${$.readheader}`)
+      console.log(`${$.readkey}`)
       //await invite()
       await sign_in()
       //await step_submit()
