@@ -45,9 +45,9 @@ TG电报群: https://t.me/hahaha8028
 hostname = dkd-api.dysdk.com
 */
 const $ = new Env('多看点');
-let dkdurl = process.env.DKDURL;
-let dkdhd = process.env.DKDHD;
-let dkdbody = process.env.DKDBODY;
+let dkdurl = $.getdata('dkdurl')
+let dkdhd = $.getdata('dkdhd')
+let dkdbody = $.getdata('dkdbody')
 let dkdtxurl = $.getdata('dkdtxurl')
 let dkdtxhd = $.getdata('dkdtxhd')
 let dkdtxbody = $.getdata('dkdtxbody')
@@ -66,25 +66,24 @@ let dkdtxbody = $.getdata('dkdtxbody')
 function dkdck() {
    if ($request.url.indexOf("index") > -1) {
     $.setdata(JSON.stringify($request.url),'dkdurl')
-	$.log(`多看点url获取成功,dkdurl: ${dkdurl}`)
-	   $.msg(`dkdurl: 成功🎉`, ``)
+    $.log(dkdurl)
     $.setdata(JSON.stringify($request.headers),'dkdhd')
-	$.log(`多看点headers获取成功,dkdhd: ${dkdhd}`)
-	   $.msg(`dkdhd: 成功🎉`, ``)
+$.log(dkdhd)
     $.setdata($request.body,'dkdbody')
-	$.log(`多看点body获取成功, dkdbody: ${dkdbody}`)
-	   $.msg(`dkdbody: 成功🎉`, ``)
+$.log(dkdbody)
+   $.msg($.name,"","多看点headers获取成功！")
+   $.msg($.name,"","多看点body获取成功！")
     }
   }
 //多看点提现ck
 function dkdtxck() {
    if ($request.url.indexOf("withdraw_do?") > -1) {
     $.setdata(JSON.stringify($request.url),'dkdtxurl')
-    $.log(`多看点提现url获取成功,dkdtxurl: ${dkdtxurl}`)
+    $.log(dkdtxurl)
     $.setdata(JSON.stringify($request.headers),'dkdtxhd')
-	$.log(`多看点提现header获取成功,dkdtxhd: ${dkdtxhd}`)
+$.log(dkdtxhd)
     $.setdata($request.body,'dkdtxbody')
-	$.log(`多看点提现body获取成功,dkdtxbody: ${dkdtxbody}`)
+$.log(dkdtxbody)
    $.msg($.name,"","多看点提现数据获取成功！")
    
     }
@@ -304,9 +303,7 @@ let url = {
 if(result.status_code == 10020){
         console.log('签到回执:失败🚫 '+result.message)
 
-}$.msg($.name,"",'多看点开始🖨')
-//await dkdtx() 
-//await dkdyq()
+}
 await dkdgg()
 await dkdbx()
 await dkdbxfb()
@@ -314,6 +311,9 @@ await dkdcj()
 await dkdfx()
 await dkdxs()
 await dkdxx()
+//await dkdtx() 
+//await dkdyq()
+
         } catch (e) {
           //$.logErr(e, resp);
         } finally {
