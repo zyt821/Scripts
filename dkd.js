@@ -62,7 +62,7 @@ let dkdtxbody = $.getdata('dkdtxbody')
 })()
   .catch((e) => $.logErr(e))
   .finally(() => $.done())
-  /多看点数据获取
+  //多看点数据获取
   function dkdck() {
      if ($request.url.indexOf("index") > -1) {
       $.setdata(JSON.stringify($request.url),'dkdurl')
