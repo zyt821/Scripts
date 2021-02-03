@@ -12,7 +12,10 @@ jobs:
   build:	
 
     runs-on: ubuntu-latest	
-    if: github.event.repository.owner.id == github.event.sender.id	
+    if: github.event.repository.owner.id == github.event.sender.id
+    env:	
+          BBB_CK: ${{ secrets.BBB_CK3 }} 
+          TZ: Asia/shanghai			
     steps:	
       - name: Checkout	
         uses: actions/checkout@v2	
@@ -26,8 +29,7 @@ jobs:
       - name: '运行 【步步宝账户3】'	
         run: |	
           node BBB.js	
-        env:	
-          BBB_CK: ${{ secrets.BBB_CK3 }}  	
+        env:		
           JD_DEBUG: ${{ secrets.JD_DEBUG }}	
           PUSH_KEY: ${{ secrets.PUSH_KEY }}	
           BARK_PUSH: ${{ secrets.BARK_PUSH }}	
