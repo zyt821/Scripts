@@ -3,9 +3,9 @@
     "name": "zyt 订阅",
     "author": "@zyt821",
     "icon": "",
-    "repo": "https://github.com/ziye12/QCZJSPEED",
+    "repo": "https://github.com/age174/-",
     "apps": [{
-    "id": "dkdvideo",
+    "id": "dkdsp",
     "name": "多看点视频",
     "keys": ["dkdbody", "dkdhd", "dkdvd_body"],
     "author": "@ziye",
@@ -31,8 +31,8 @@
     "desc": "0不提现，可设置0 0.5 2 5 10 20 "
     }
     ],
-    "repo": "https://github.com/ziye12/QCZJSPEED/blob/main/Task/qczjspeed.js",
+    "repo": "https://github.com/age174/-/blob/main/dkdsp.js",
     "icons": ["https://raw.githubusercontent.com/Orz-3/task/master/qczj.png", "https://raw.githubusercontent.com/Orz-3/task/master/qczj.png"],
-    "script": "https://raw.githubusercontent.com/ziye12/QCZJSPEED/main/Task/qczjspeed.js"
+    "script": "https://github.com/age174/-/blob/main/dkdsp.js"
     }]
     }
