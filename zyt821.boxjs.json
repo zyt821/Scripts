@@ -38,7 +38,7 @@
      {
             "id": "MH",
             "name": "githubAC",
-            "keys": ["mhurl", "mhhd", "githubACheader", "mhbody"],
+            "keys": ["mhurl", "mhhd", "mhbody"],
             "author": "@feizhao",
             "settings": [{
                     "id": "githubACSuffix",
