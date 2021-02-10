@@ -6,7 +6,7 @@
 	"apps": [{
 		"id": "dkdvideo",
 		"name": "多看点视频",
-		"keys": ["dkdtokenbody", "dkdtokenkey", "dkdcashurl", "dkdcashbody", "dkdcashkey", "dkdlottourl", "dkdlottokey", "getawardbody","getawardbody_index",],
+		"keys": ["dkdtokenbody", "dkdtokenkey", "dkdcashurl", "dkdcashbody", "dkdcashkey", "dkdlottourl", "dkdlottokey", "getawardbody","getawardbody_index"],
 		"settings": [
 			{
 				"id": "getawardbody",
