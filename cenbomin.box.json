@@ -3,8 +3,7 @@
 	"name": "zyt821 应用订阅",
 	"author": "@cenbomin",
 	"repo": "https://github.com/CenBoMin/GithubSync",
-	"apps": [
-		{
+	"apps": [{
 		"id": "dkdvideo",
 		"name": "多看点视频",
 		"keys": ["dkdtokenbody", "dkdtokenkey", "dkdcashurl", "dkdcashbody", "dkdcashkey", "dkdlottourl", "dkdlottokey", "getawardbody", "getawardbody_index"],
