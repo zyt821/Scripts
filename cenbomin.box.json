@@ -8,27 +8,6 @@
 		"id": "dkdvideo",
 		"name": "多看点视频",
 		"keys": ["dkdtokenbody", "dkdtokenkey", "dkdcashurl", "dkdcashbody", "dkdcashkey", "dkdlottourl", "dkdlottokey", "getawardbody", "getawardbody_index"],
-		"settings": [
-			{
-				"id": "getawardbody",
-				"name": "视频请求",
-				"val": "",
-				"type": "textarea",
-				"autoGrow": false,
-				"rows": 1,
-				"desc": "看视频，倒计时转一圈显示金币到账。"
-			},
-			{
-					"id": "getawardbody_index",
-					"name": "上次执行位置",
-					"val": "",
-					"type": "textarea",
-					"autoGrow": false,
-					"rows": 1,
-					"desc": "记录上次执行的位置，可以控制从第几个视频请求开始执行"
-				}
-		],
-		"author": "@cenbomin",
 		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
 		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/WLAPP/dkd.js",
 		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/WLAPP/dkd.JPG","https://raw.githubusercontent.com/CenBoMin/GithubSync/main/WLAPP/dkd.JPG"
