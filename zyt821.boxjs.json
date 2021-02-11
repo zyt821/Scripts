@@ -23,7 +23,7 @@
     },{
             "id": "dkdvideo",
             "name": "多看点视频",
-            "keys": ["dkdtokenbody", "dkdtokenkey", "dkdcashurl", "dkdcashbody", "dkdcashkey", "dkdlottourl", "dkdlottokey", "getawardbody", "getawardbody_index"],
+            "keys": ["zyttest", "dkdtokenbody", "dkdtokenkey", "dkdcashurl", "dkdcashbody", "dkdcashkey", "dkdlottourl", "dkdlottokey", "getawardbody", "getawardbody_index"],
             "repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
             "script": "https://github.com/CenBoMin/GithubSync/blob/main/DKDVIDEO/dkdvideo.js"
     }]
