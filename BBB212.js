@@ -492,7 +492,7 @@ return new Promise((resolve, reject) => {
   let clicktaskstatus ={
     url: `${BBB_API}user/renwu`,
     headers: JSON.parse(CookieVal),
-    body: `idfa=${JSON.parse(CookieVal[i])['idfa']}&`,
+    body: `idfa=${JSON.parse(CookieVal)['idfa']}&`,
 }
    $.post(clicktaskstatus,async(error, response, data) =>{
      const clicktask = JSON.parse(data)
