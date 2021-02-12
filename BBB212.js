@@ -46,7 +46,7 @@ $.log(`\n=================共提供`+CookieVal.length+`个账号================
     await getQuestionId()   // 查询答題ID
     await guaList()         // 查询刮刮卡ID
     await checkHomeJin()    // 查询首页状态
-    if (now_time==10) {
+    if (now_time==14) {
       await checkH5Id()        // 看看賺,一天一次
     }     
     await showmsg()         // 推送消息
@@ -76,7 +76,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let userInfo ={
     url: `${BBB_API}user/profile`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(userInfo,async(error, response, data) =>{
      const userinfo = JSON.parse(data)
@@ -96,7 +96,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let signin ={
     url: `${BBB_API}user/sign`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(signin,async(error, response, data) =>{
 $.log('\n🔔开始签到\n')
@@ -119,7 +119,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let signdouble ={
     url: `${BBB_API}you/callback`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `nonce_str=${signInStr}&tid=2&pos=1&`,
 }
    $.post(signdouble,async(error, response, data) =>{
@@ -141,7 +141,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let zaowandkinfo ={
     url: `${BBB_API}mini/dk_info`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(zaowandkinfo,async(error, response, data) =>{
      const zwdkinfo = JSON.parse(data)
@@ -163,7 +163,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let zaowandk ={
     url: `${BBB_API}user/chuansj`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `mini_pos=3&c_type=1&`,
 }
    $.post(zaowandk,async(error, response, data) =>{
@@ -183,7 +183,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let dkclick ={
     url: `${BBB_API}mini/dk_click`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `now_time=${nowTime}&`,
 }
    $.post(dkclick,async(error, response, data) =>{
@@ -205,7 +205,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let gualist ={
     url: `${BBB_API}gua/gualist?`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(gualist,async(error, response, data) =>{
 $.log('\n🔔开始查询刮刮卡ID\n')
@@ -231,7 +231,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let guadet ={
     url: `${BBB_API}gua/guadet?`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `gid=${guaID}&`
 }
    $.post(guadet,async(error, response, data) =>{
@@ -255,7 +255,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let guapost ={
     url: `${BBB_API}gua/guapost?`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `sign=${SIGN}&gid=${guaID}&glid=${GLID}&`
 }
    $.post(guapost,async(error, response, data) =>{
@@ -278,7 +278,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let guadouble ={
     url: `${BBB_API}you/callback`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `nonce_str=${guaStr}&tid=6&pos=1&`,
 }
    $.post(guadouble,async(error, response, data) =>{
@@ -302,7 +302,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let checkwaternum ={
     url: `${BBB_API}mini/water_info`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(checkwaternum,async(error, response, data) =>{
 $.log('\n🔔开始查询喝水杯数\n')
@@ -330,7 +330,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let checksp ={
     url: `${BBB_API}user/chuansj`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `mini_pos=2&c_type=1&`,
 }
    $.post(checksp,async(error, response, data) =>{
@@ -349,7 +349,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let watersp ={
     url: `${BBB_API}mini/water_sp`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `day_num=${waterNum}&`,
 }
    $.post(watersp,async(error, response, data) =>{
@@ -369,7 +369,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let waterclick ={
     url: `${BBB_API}mini/water_click`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `day_num=0${waterNum}&`,
 }
    $.post(waterclick,async(error, response, data) =>{
@@ -391,7 +391,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let sleepstatus ={
     url: `${BBB_API}mini/sleep_info`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(sleepstatus,async(error, response, data) =>{
 $.log('\n🔔开始查询睡觉状态\n')
@@ -429,7 +429,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let sleepstart ={
     url: `${BBB_API}mini/sleep_start`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(sleepstart,async(error, response, data) =>{
      const startsleep = JSON.parse(data)
@@ -449,7 +449,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let sleepend ={
     url: `${BBB_API}mini/sleep_end`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(sleepend,async(error, response, data) =>{
      const endsleep = JSON.parse(data)
@@ -470,7 +470,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let sleepdone ={
     url: `${BBB_API}mini/sleep_done`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `taskid=${sleepId}&nonce_str=${sleepStr}&`
 }
    $.post(sleepdone,async(error, response, data) =>{
@@ -491,7 +491,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let clicktaskstatus ={
     url: `${BBB_API}user/renwu`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `idfa=${JSON.parse(CookieVal[i])['idfa']}&`,
 }
    $.post(clicktaskstatus,async(error, response, data) =>{
@@ -512,7 +512,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let watchtaskstatus ={
     url: `${BBB_API}user/renwu`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `idfa=${JSON.parse(CookieVal[i])['idfa']}&`,
 }
    $.post(watchtaskstatus,async(error, response, data) =>{
@@ -536,7 +536,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let checkdailywatchadid ={
     url: `${BBB_API}user/chuansj`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `mini_pos=0&c_type=1&`,
 }
    $.post(checkdailywatchadid,async(error, response, data) =>{
@@ -560,7 +560,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let dailywatchad ={
     url: `${BBB_API}you/callback`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `nonce_str=${dailyWatchStr}&tid=9&pos=1&`,
 }
    $.post(dailywatchad,async(error, response, data) =>{
@@ -590,7 +590,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let checkdailyclickadid ={
     url: `${BBB_API}user/admobile_show`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(checkdailyclickadid,async(error, response, data) =>{
 $.log('\n🔔开始查询每日广告ID\n')
@@ -613,7 +613,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let checkdailyclickad ={
     url: `${BBB_API}user/admobile_click`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `ad_id=${dailyClickAdId}&`,
 }
    $.post(checkdailyclickad,async(error, response, data) =>{
@@ -636,7 +636,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let dailyclickad ={
     url: `${BBB_API}user/admobile_done`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `nonce_str=${dailyClickStr}&ad_id=${dailyClickAdId}&`,
 }
    $.post(dailyclickad,async(error, response, data) =>{
@@ -661,7 +661,7 @@ function checkHomeJin() {
     let timestamp=new Date().getTime();
     let checkhomejin ={
       url: `${BBB_API}user/home`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
     }
     $.post(checkhomejin,async(error, response, data) =>{
       const checkhomejb = JSON.parse(data)
@@ -719,7 +719,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let homejin ={
     url: `${BBB_API}user/homejin`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(homejin,async(error, response, data) =>{
      const homejb = JSON.parse(data)
@@ -745,7 +745,7 @@ function homeJinCallBack() {
     let timestamp=new Date().getTime();
     let homejincallback ={
       url: `${BBB_API}you/callback`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
       body: `nonce_str=${homeJinStr}&tid=21&pos=1&`,
     }
     $.post(homejincallback,async(error, response, data) =>{
@@ -768,7 +768,7 @@ function checkRedBagId() {
     let timestamp=new Date().getTime();
     let checkredbagid ={
       url: `${BBB_API}user/chuansj`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
       body: `c_type=2`,
     }
     $.post(checkredbagid,async(error, response, data) =>{
@@ -791,7 +791,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let redbagcallback ={
     url: `${BBB_API}you/callback`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `nonce_str=${redBagStr}&tid=17&pos=1&`,
 }
    $.post(redbagcallback,async(error, response, data) =>{
@@ -815,7 +815,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let checkgoldeggid ={
     url: `${BBB_API}user/jindan_click`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(checkgoldeggid,async(error, response, data) =>{
      const goldeggid = JSON.parse(data)
@@ -841,7 +841,7 @@ return new Promise((resolve, reject) => {
   let timestamp= Date.parse(new Date())/1000;
   let goldeggdone ={
     url: `${BBB_API}user/jindan_done`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `taskid=${goldEggId}&clicktime=${timestamp}&donetime=${timestamp}+1000&nonce_str=${goldEggStr}&`
 }
    $.post(goldeggdone,async(error, response, data) =>{
@@ -865,7 +865,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let goldeggcallback ={
     url: `${BBB_API}you/callback`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `nonce_str=${goldEggStr}&tid=5&pos=1&`,
 }
    $.post(goldeggcallback,async(error, response, data) =>{
@@ -888,7 +888,7 @@ function helpStatus() {
     let timestamp=new Date().getTime();
     let helpstatus ={
       url: `${BBB_API}user/help_index`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
     }
     $.post(helpstatus,async(error, response, data) =>{
       const help = JSON.parse(data)
@@ -910,7 +910,7 @@ function checkCode() {
     let timestamp=new Date().getTime();
     let checkcode ={
       url: `${BBB_API}user/chuansj`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
       body: `mini_pos=5`,
     }
     $.post(checkcode,async(error, response, data) =>{
@@ -932,7 +932,7 @@ function helpClick() {
     let timestamp=new Date().getTime();
     let helpclick ={
       url: `${BBB_API}user/help_click`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
       body: `nonce_str=${nonce_str}`,
     }
     $.post(helpclick,async(error, response, data) =>{
@@ -957,7 +957,7 @@ function callBack() {
     let timestamp=new Date().getTime();
     let callback ={
       url: `${BBB_API}you/callback`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
       body: `nonce_str=${nonce_str}&tid=22&pos=1&`,
     }
     $.post(callback,async(error, response, data) =>{
@@ -981,7 +981,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let getnewsid ={
     url: `${BBB_API}user/news`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `type_class=1`
 }
    $.post(getnewsid,async(error, response, data) =>{
@@ -1014,7 +1014,7 @@ function autoRead() {
     let timestamp=new Date().getTime();
     let autoread ={
       url: `${BBB_API}user/donenews`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
       body: `nonce_str=${newsStr}`,
     }
     $.post(autoread,async(error, response, data) =>{
@@ -1034,7 +1034,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let lucknum ={
     url: `${BBB_API}user/lucky`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(lucknum,async(error, response, data) =>{
      const num = JSON.parse(data)
@@ -1064,7 +1064,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let luckclick ={
     url: `${BBB_API}user/lucky_click`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(luckclick,async(error, response, data) =>{
      const lucky = JSON.parse(data)
@@ -1091,7 +1091,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let luckycallback ={
     url: `${BBB_API}you/callback`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `nonce_str=${luckyStr}&tid=16&pos=1&`,
 }
    $.post(luckycallback,async(error, response, data) =>{
@@ -1114,7 +1114,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let luckybox ={
     url: `${BBB_API}user/lucky_box`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `box=${getBoxId()}&`,
 }
 //$.log('\nlockyboxBODY:'+luckybox.body+'\n')
@@ -1140,7 +1140,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let luckyboxcallback ={
     url: `${BBB_API}you/callback`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `nonce_str=${luckyBoxStr}&tid=16&pos=1&`,
 }
    $.post(luckyboxcallback,async(error, response, data) =>{
@@ -1164,7 +1164,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let getquestionid ={
     url: `${BBB_API}mini/cy_info`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
 }
    $.post(getquestionid,async(error, response, data) =>{
      const question = JSON.parse(data)
@@ -1194,7 +1194,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let checksp ={
     url: `${BBB_API}user/chuansj`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `mini_pos=1&c_type=1&`,
 }
    $.post(checksp,async(error, response, data) =>{
@@ -1215,7 +1215,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let cysp ={
     url: `${BBB_API}mini/cy_sp`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `day_num=${spId}&`,
 }
    $.post(cysp,async(error, response, data) =>{
@@ -1235,7 +1235,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let answerque ={
     url: `${BBB_API}mini/cy_click`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `cy_id=${questionId}&site=${questionSite}&`,
 }
 //$.log('\nanswerqueBODY:'+answerque.body+'\n')
@@ -1262,7 +1262,7 @@ return new Promise((resolve, reject) => {
   let timestamp=new Date().getTime();
   let answerquecallback ={
     url: `${BBB_API}you/callback`,
-    headers: JSON.parse(CookieVal[i]),
+    headers: JSON.parse(CookieVal),
     body: `nonce_str=${answerStr}&tid=18&pos=1&`,
 }
 //$.log('\nanswerQueCallBackBODY:'+answerquecallback.body+'\n')
@@ -1287,7 +1287,7 @@ function doneJin() {
     let timestamp=new Date().getTime();
     let donejin ={
       url: `${BBB_API}user/donejin`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
     }
     $.post(donejin,async(error, response, data) =>{
       const donejb = JSON.parse(data)
@@ -1312,7 +1312,7 @@ function doneJinCallBack() {
     let timestamp=new Date().getTime();
     let donejincallback ={
       url: `${BBB_API}you/callback`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
       body: `nonce_str=${doneJinStr}&tid=19&pos=1&`,
     }
     $.post(donejincallback,async(error, response, data) =>{
@@ -1335,7 +1335,7 @@ function doneJinS() {
     let timestamp=new Date().getTime();
     let donejins ={
       url: `${BBB_API}user/donejin`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
     }
     $.post(donejins,async(error, response, data) =>{
       const donejbs = JSON.parse(data)
@@ -1356,7 +1356,7 @@ function checkH5Id() {
     let timestamp=new Date().getTime();
     let checkh5id ={
       url: `${BBB_API}user/h5_list?page=1&page_limit=15`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
     }
     $.post(checkh5id,async(error, response, data) =>{
       const checkh5 = JSON.parse(data)
@@ -1440,7 +1440,7 @@ function h5Done() {
     let timestamp=new Date().getTime();
     let h5done ={
       url: `${BBB_API}user/h5_newsdone`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
       body: `nonce_str=${H5Str}&taskid=${H5TaskID}`,
       timeout: 31000,
     }
@@ -1465,7 +1465,7 @@ function h5DoneCallBack() {
     let timestamp=new Date().getTime();
     let donejincallback ={
       url: `${BBB_API}you/callback`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
       body: `nonce_str=${h5DoneStr}&tid=19&pos=1&`,
     }
     $.post(donejincallback,async(error, response, data) =>{
