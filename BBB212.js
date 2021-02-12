@@ -1377,7 +1377,7 @@ function doTaskH5() {
     let timestamp=new Date().getTime();
     let dotaskh5 ={
       url: `${BBB_API}user/h5_news`,
-      headers: JSON.parse(CookieVal[i]),
+      headers: JSON.parse(CookieVal),
       body: `mini_id=${H5ID}`,
     }
     $.post(dotaskh5,async(error, response, data) =>{
