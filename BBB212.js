@@ -513,7 +513,7 @@ return new Promise((resolve, reject) => {
   let watchtaskstatus ={
     url: `${BBB_API}user/renwu`,
     headers: JSON.parse(CookieVal),
-    body: `idfa=${JSON.parse(CookieVal[i])['idfa']}&`,
+    body: `idfa=${JSON.parse(CookieVal)['idfa']}&`,
 }
    $.post(watchtaskstatus,async(error, response, data) =>{
      const watchtask = JSON.parse(data)
