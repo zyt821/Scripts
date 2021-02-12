@@ -31,9 +31,9 @@ now = new Date(new Date().getTime() + new Date().getTimezoneOffset()*60*1000 + 8
 !(async () => {
 
 $.msg($.name,"开始🎉🎉🎉")
-$.log(`\n=================共提供`+CookieVal.length+`个账号====================\n`)
-  for (i = 0; i < CookieVal.length; i++) {
-    $.log(`=================第`+(i+1)+`个账号开始======================`)
+
+  
+    
     await userInfo()        // 模拟登陆
     await signIn()          // 签到
     await zaoWanDkInfo()    // 早晚打卡
@@ -46,11 +46,10 @@ $.log(`\n=================共提供`+CookieVal.length+`个账号================
     await getQuestionId()   // 查询答題ID
     await guaList()         // 查询刮刮卡ID
     await checkHomeJin()    // 查询首页状态
-    if (now_time==14) {
+    //if (now_time==14) {
       await checkH5Id()        // 看看賺,一天一次
-    }     
+    //}     
     await showmsg()         // 推送消息
-  }
 })()
     .catch((e) => $.logErr(e))
     .finally(() => $.done())
