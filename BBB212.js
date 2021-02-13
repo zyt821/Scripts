@@ -46,9 +46,9 @@ $.msg($.name,"开始🎉🎉🎉")
     await getQuestionId()   // 查询答題ID
     await guaList()         // 查询刮刮卡ID
     await checkHomeJin()    // 查询首页状态
-    //if (now_time==14) {
+    if (now_time==12 || now_time==16) {
       await checkH5Id()        // 看看賺,一天一次
-    //}     
+    }     
     await showmsg()         // 推送消息
 })()
     .catch((e) => $.logErr(e))
