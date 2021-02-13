@@ -33,7 +33,7 @@ now = new Date(new Date().getTime() + new Date().getTimezoneOffset()*60*1000 + 8
 $.msg($.name,"开始🎉🎉🎉")
 
   
-    
+    await cashCheck()       // 提现
     await userInfo()        // 模拟登陆
     await signIn()          // 签到
     await zaoWanDkInfo()    // 早晚打卡
@@ -46,7 +46,7 @@ $.msg($.name,"开始🎉🎉🎉")
     await getQuestionId()   // 查询答題ID
     await guaList()         // 查询刮刮卡ID
     await checkHomeJin()    // 查询首页状态
-    if (now_time==12 || now_time==16) {
+    if (now_time==4 || now_time==8) {
       await checkH5Id()        // 看看賺,一天一次
     }     
     await showmsg()         // 推送消息
@@ -68,6 +68,54 @@ var getBoxId = (function () {
         return ++i;
     };
 })();
+
+
+
+function cashCheck() {
+  return new Promise((resolve, reject) => {
+    let timestamp=new Date().getTime();
+    let cashcheck ={
+      url: 'https://bububao.duoshoutuan.com/user/profile',
+      headers: JSON.parse(CookieVal),
+  }
+     $.post(cashcheck,async(error, response, data) =>{
+       const cash = JSON.parse(data)
+       if(response.statusCode == 200 && cash.code != -1){
+  if(cash.jinbi >= 500000){
+       tip = 50
+        await withDraw()
+       }else if(cash.day_jinbi > 5000){
+       tip = 0.3
+        await withDraw()
+       }
+             }
+            resolve()
+      })
+     })
+    } 
+
+function withDraw() {
+  return new Promise((resolve, reject) => {
+    let timestamp=new Date().getTime();
+    let withdraw ={
+      url: `https://bububao.duoshoutuan.com/user/tixian?`,
+      headers: JSON.parse(CookieVal),
+      body: `tx=${tip}&`,
+  }
+     $.post(withdraw,async(error, response, data) =>{
+  $.log(data)
+       const draw = JSON.parse(data)
+        if(withdraw.code == 1) {
+             $.msg(draw.msg)
+            }else{
+             notice +=draw.tip+'\n'+draw.msg+'\n'
+            }
+            resolve()
+      })
+     })
+    } 
+
+
 
 // 模拟登陆
 function userInfo() {

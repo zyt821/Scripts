@@ -28,7 +28,7 @@ jobs:
           npm install	
       - name: '运行 【步步宝账户3】'	
         run: |	
-          node BBB.js	
+          node BBB212.js	
         env:		
           JD_DEBUG: ${{ secrets.JD_DEBUG }}	
           PUSH_KEY: ${{ secrets.PUSH_KEY }}	
