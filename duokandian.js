@@ -37,7 +37,7 @@ hostname=dkd-api.dysdk.com,
 
 ############## 圈x
 #多看点APP获取body
-http:\/\/dkd-api\.dysdk\.com\/* url script-request-body https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/duokandian.js   
+http:\/\/dkd-api\.dysdk\.com\/* url script-request-body https://raw.githubusercontent.com/zyt821/Scripts/main/duokandian.js   
 
 ############## loon
 http-request http:\/\/dkd-api\.dysdk\.com\/* script-path=https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/duokandian.js,requires-body=1,max-size=0, tag=多看点APP获取body
