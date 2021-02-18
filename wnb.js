@@ -69,7 +69,7 @@ for (let i = 0; i < 5; i++) {
       await wnbhb();
       await $.wait(3000);
 }await wnbxx();
-await wnbtj();
+//await wnbtj();
 
 
   }
