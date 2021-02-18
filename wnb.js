@@ -122,7 +122,7 @@ function wnbtj(timeout = 0) {
 let url = {
         url : 'https://api.snail2020.com/api/user/info/bindInviteUser',
         headers : JSON.parse($.getdata('wnbhd')),
-        body :  `inviteMobile=18359766885&countryCode=86
+        body :  `inviteMobile=15894440800&countryCode=86
 `,}
       $.post(url, async (err, resp, data) => {
         try {
