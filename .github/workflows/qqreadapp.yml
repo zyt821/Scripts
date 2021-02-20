@@ -22,7 +22,7 @@ jobs:
           npm install
       - name: "运行【QQ阅读】"
         run: |
-          node QQread.js
+          node QQread220.js
         env:
           QQ_QQreadURL: ${{ secrets.QQ_QQreadURL }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
