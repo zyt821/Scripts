@@ -1,13 +1,13 @@
 //独立COOKIE文件     ck在``里面填写，多账号换行
-let QQreadheaderVal = ``
+let QQreadurlVal = ``
 
 
 
 
-let QQreadheadercookie = {
+let QQreadurlcookie = {
 
-    QQreadheaderVal: QQreadheaderVal,
+    QQreadurlVal: QQreadurlVal,
 
 }
 
-module.exports = QQreadheadercookie
+module.exports = QQreadurlcookie
