@@ -134,8 +134,8 @@ let tm = ''
           await dkatm();
           await $.wait(1000);
           await dkaxw();
-          //await $.wait(1000);
-//await dkaxs();//蛋咖小说，已禁用，需要开启的自己删了注释
+          await $.wait(1000);
+          await dkaxs();//蛋咖小说，已禁用，需要开启的自己删了注释
           await $.wait(1000);
           await dkakkz();
           await dkaxx();
