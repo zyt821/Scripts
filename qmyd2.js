@@ -302,7 +302,7 @@ async function all() {
             await news() //资讯赚
             await lotteryindex() //抽手机
             await cy_info() //答题
-            await tixian_html() //提现
+            // //提现
         }
 
 
