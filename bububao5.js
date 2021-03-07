@@ -284,7 +284,7 @@ async function all() {
             'tokenstr': `${bububaotokenVal}`,
             'Connection': `keep-alive`,
             'Accept-Encoding': `gzip, deflate, br`,
-            'version': `11`,
+            'version': `10`,
             'idfa': `247A0798-AE26-4445-8D2B-23C49599823C`,
             'Content-Type': `application/x-www-form-urlencoded`,
             'User-Agent': `BBB/133 CFNetwork/978.0.7 Darwin/18.7.0`,
