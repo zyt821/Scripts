@@ -21,6 +21,5 @@ jobs:
           npm install cron
           npm install request
       - name: '运行 【步步宝】'
-        run: |
-          cd ~/js   
-          node Task/bububao-cxk.js
+        run: |   
+          node bububao-cxk.js
