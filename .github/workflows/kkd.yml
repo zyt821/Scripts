@@ -38,6 +38,7 @@ jobs:
         run: |
           node kkd.js
         env:
+          KKDSIGN: ${{ secrets.KKDSIGN }}
           KKDHEADER: ${{ secrets.KKDHEADER }}
           KKDCOOKIE: ${{ secrets.KKDCOOKIE }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
