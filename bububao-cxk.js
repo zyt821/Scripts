@@ -6,7 +6,7 @@ const notify = $.isNode() ? require("./sendNotify") : ``;
 const logs = 0; // 0为关闭日志，1为开启
 const notifyttt = 1; // 0为关闭外部推送，1为12 23 点外部推送
 const notifyInterval = 2; // 0为关闭通知，1为所有通知，2为12 23 点通知  ， 3为 6 12 18 23 点通知
-$.message = '', COOKIES_SPLIT = '', CASH = '0.3', ddtime = '';
+$.message = '', COOKIES_SPLIT = '', CASH = '', ddtime = '';
 CZ = 10;
 const bububaotokenArr = ['B99CC155545F7799DAC76760B525025G1610985070', '9854DAB7F1377100EB1B2BFE7525924G1611051781', '68A3FF4BBF1443837D919C973525920G1611051098', '55266B145E601DD35740F9F8B532528G1614686032', 'B9507582D9653FE7DD37A4406532529G1614686399', 'DD53903C51922FC01BA8D056D534295G1617203163'];
 let bububaotokenVal = ``;
