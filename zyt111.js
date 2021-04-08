@@ -29,7 +29,7 @@ let kg = 0
           shqurl = shqurlArr[i];
           shqhd = shqhdArr[i];
           $.index = i + 1;
-          console.log(`\n开始【生活圈${$.index}】`)
+          console.log(`\n开始【${$.index}】`)
           await shqlb();
           await shqxx();
           if(kg == 1){
