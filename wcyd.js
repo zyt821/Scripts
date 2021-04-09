@@ -29,16 +29,16 @@ https://raw.githubusercontent.com/age174/-/main/feizao.box.json
 
 [rewrite_local]
 #文创阅读
-http://mbeysxap.bar/hfTask/startRead url script-request-header https://raw.githubusercontent.com/age174/-/main/wcyd.js
+http://bxkqemkc.bar/hfTask/startRead url script-request-header https://raw.githubusercontent.com/age174/-/main/wcyd.js
 
 #loon
-http://mbeysxap.bar/hfTask/startRead script-path=https://raw.githubusercontent.com/age174/-/main/wcyd.js, requires-header=true, timeout=10, tag=文创阅读
+http://bxkqemkc.bar/hfTask/startRead script-path=https://raw.githubusercontent.com/age174/-/main/wcyd.js, requires-header=true, timeout=10, tag=文创阅读
 
 #surge
-文创阅读 = type=http-request,pattern=http://mbeysxap.bar/hfTask/startRead,requires-header=1,max-size=0,script-path=https://raw.githubusercontent.com/age174/-/main/wcyd.js,script-update-interval=0
+文创阅读 = type=http-request,pattern=http://bxkqemkc.bar/hfTask/startRead,requires-header=1,max-size=0,script-path=https://raw.githubusercontent.com/age174/-/main/wcyd.js,script-update-interval=0
 
 [MITM]
-hostname = mbeysxap.bar
+hostname = bxkqemkc.bar
 
 */
 
@@ -108,7 +108,7 @@ function wcyd1(timeout = 0) {
       }
 
 let url = {
-        url : 'http://mbeysxap.bar/hfTask/startRead',
+        url : 'http://bxkqemkc.bar/hfTask/startRead',
         headers : JSON.parse(wcydhd),
         body : 'isM6=2',
 }
@@ -147,7 +147,7 @@ function wcyd2(timeout = 0) {
       }
 
 let url = {
-        url : 'http://mbeysxap.bar/hfTask/startRead',
+        url : 'http://bxkqemkc.bar/hfTask/startRead',
         headers : JSON.parse(wcydhd),
         body : 'isM6=1',
 }
@@ -181,7 +181,7 @@ function wcydlb(timeout = 0) {
   return new Promise((resolve) => {
 
 let url = {
-        url : "http://mbeysxap.bar/hfTask/read",
+        url : "http://bxkqemkc.bar/hfTask/read",
         headers : JSON.parse(wcydhd),
         body : '',
        
@@ -213,7 +213,7 @@ let url = {
 function wcydyd(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : "http://mbeysxap.bar/hfTask/getUser",
+        url : "http://bxkqemkc.bar/hfTask/getUser",
         headers : JSON.parse(wcydhd),
         body : 'token=',
 }
@@ -229,8 +229,8 @@ $.log('\n文创阅读检测到当前余额可提现，前去提现')
 await wcydtx();
 
 }
-       await $.wait(1000);
-       await wcyd1();
+       //await $.wait(1000);
+       //await wcyd1();
 } else {
        console.log('\n文创阅读用户信息获取失败 '+data)
 
@@ -251,7 +251,7 @@ function wcydtx(timeout = 0) {
   return new Promise((resolve) => {
 
 let url = {
-        url : "http://mbeysxap.bar/hfTask/cash",
+        url : "http://bxkqemkc.bar/hfTask/cash",
         headers : JSON.parse(wcydhd),
         body : `wx=&zfb=${zfb}&name=${name}`,
 }
