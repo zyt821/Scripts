@@ -229,8 +229,8 @@ $.log('\n文创阅读检测到当前余额可提现，前去提现')
 await wcydtx();
 
 }
-       //await $.wait(1000);
-       //await wcyd1();
+       await $.wait(1000);
+       await wcyd1();
 } else {
        console.log('\n文创阅读用户信息获取失败 '+data)
 
