@@ -4,7 +4,7 @@ name: 走路赚钱5
 on:
   workflow_dispatch:
   schedule:
-     - cron: '48 * * * *'
+     - cron: '*/8 * * * *'
   watch:
     types: started
 jobs:
