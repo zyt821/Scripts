@@ -107,9 +107,9 @@ const jsL=''
 
 //开启打印则设置为1
 const jsAA=1  
-const jsBB=0  
-const jsCC=0  
-const jsDD=0  
+const jsBB=1  
+const jsCC=1  
+const jsDD=1  
 const jsEE=0  
 const jsFF=0  
 const jsGG=0  
