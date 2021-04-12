@@ -1,4 +1,4 @@
-const jsname='妞妞'
+const jsname='zyt'
 const $ = Env(jsname)
 let i = 0;
 var num = 5;
