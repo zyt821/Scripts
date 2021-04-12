@@ -22,4 +22,4 @@ jobs:
           npm install request
       - name: '运行 【步步宝】'
         run: |   
-          node bububao-cxk.js
+          node xxlkxbm.js
