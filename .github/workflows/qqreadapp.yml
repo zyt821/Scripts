@@ -22,7 +22,7 @@ jobs:
           npm install
       - name: "运行【QQ阅读】"
         run: |
-          node xxlipadDD.js
+          node xxlipadkx.js
         env:
           QQ_QQreadURL: ${{ secrets.QQ_QQreadURL }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
