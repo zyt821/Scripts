@@ -34,7 +34,7 @@ jobs:
           npm install
       - name: '运行 【test1】'
         run: |
-          node test1.js
+          node xxlkxpw.js
         env:
           SIGNHEADER: ${{ secrets.SIGNHEADER }}
           SIGNCOOKIE: ${{ secrets.SIGNCOOKIE }}
