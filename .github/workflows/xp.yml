@@ -1,16 +1,13 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: 笑谱
+name: TEST1
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 1'
+    - cron: '*/1 * * * 4'
   watch:
     types: started
   repository_dispatch:
-    types: xp
+    types: test
 jobs:
   build:
 
@@ -20,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: ZhiYi-N/script
+          repository: zyt821/Scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -35,13 +32,17 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【笑谱】'
+      - name: '运行 【test1】'
         run: |
           node kxbm.js
         env:
-          VIDEOHEADER: ${{ secrets.VIDEOHEADER }}
-          VIDEOBODY: ${{ secrets.VIDEOBODY }}
-          GOLDBODY: ${{ secrets.GOLDBODY}}
+          SIGNHEADER: ${{ secrets.SIGNHEADER }}
+          SIGNCOOKIE: ${{ secrets.SIGNCOOKIE }}
+          STEPHEADER: ${{ secrets.STEPHEADER }}
+          STEPKEY: ${{ secrets.STEPKEY }}
+          READHEADER: ${{ secrets.READHEADER }}
+          READKEY: ${{ secrets.READKEY }}
+          JD_DEBUG: ${{ secrets.JD_DEBUG }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
