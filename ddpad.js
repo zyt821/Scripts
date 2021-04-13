@@ -19,7 +19,7 @@ if (!xxlheader1) {
     return;
   }
      while(i<num){
-      await collect() 
+      //await collect() 
       await collect1()
       i++;
 }
