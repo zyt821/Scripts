@@ -5,8 +5,8 @@ var num = 22005;
 let xxlheader1 = `{"deviceudid":"d0950901-b02c-4758-9782-670b9d786db0-1618238467590","sign":"6415a4d1ad551929a6ce079d6edf2173","Connection":"keep-alive","Accept-Encoding":"br, gzip, deflate","Content-Type":"application/octet-stream","X-Unity-Version":"2019.3.0f6","User-Agent":"%E5%BC%80%E5%BF%83%E6%B6%88%E6%B6%88%E6%B6%88/108 CFNetwork/978.0.7 Darwin/18.7.0","token":"f12a3293b76a4581aabf8adc5b527c2b","gamePackage":"com.ios.tetris.match","Host":"r1.nullpointerexception.cn","Accept-Language":"zh-cn","Accept":"*/*","Content-Length":"119"}`
 let xxlbody1 = `{"userID":8123406356,"isLoginMsg":false,"userType":"D","time":1618243894011,"maxPassId":4,"playerLevel":1,"passType":0}`
 
-let xxlheader2 = `{"deviceudid":"d0950901-b02c-4758-9782-670b9d786db0-1618238467590","sign":"c8f7da59f7dbe15d6d9c3f929db28121","Connection":"keep-alive","Accept-Encoding":"br, gzip, deflate","Content-Type":"application/octet-stream","X-Unity-Version":"2019.3.0f6","User-Agent":"%E5%BC%80%E5%BF%83%E6%B6%88%E6%B6%88%E6%B6%88/108 CFNetwork/978.0.7 Darwin/18.7.0","token":"f12a3293b76a4581aabf8adc5b527c2b","gamePackage":"com.ios.tetris.match","Host":"r1.nullpointerexception.cn","Accept-Language":"zh-cn","Accept":"*/*","Content-Length":"120"}`
-let xxlbody2 = `{"userID":8123406356,"isLoginMsg":false,"userType":"D","time":1618243937052,"adType":4,"isActiveClick":true,"price":3.0}`
+let xxlheader2 = `{"deviceudid":"fa8ac15a-4f8b-4764-9bb9-9596fae04101-1618243757774","sign":"1f823ad77922302d8df10fba0ba9e69d","Connection":"keep-alive","Accept-Encoding":"br, gzip, deflate","Content-Type":"application/octet-stream","X-Unity-Version":"2019.3.0f6","User-Agent":"%E5%BC%80%E5%BF%83%E6%B6%88%E6%B6%88%E6%B6%88/108 CFNetwork/978.0.7 Darwin/18.7.0","token":"8099ee2b7b1a4cb19bd5c750085711f6","gamePackage":"com.ios.tetris.match","Host":"r1.nullpointerexception.cn","Accept-Language":"zh-cn","Accept":"*/*","Content-Length":"120"}`
+let xxlbody2 = `{"userID":8123406586,"isLoginMsg":false,"userType":"D","time":1618301195453,"adType":4,"isActiveClick":true,"price":3.0}`
 
 let isGetCookie = typeof $request !== 'undefined'
 if (isGetCookie) {
