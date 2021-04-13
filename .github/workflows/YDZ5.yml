@@ -29,7 +29,7 @@ jobs:
       - name: '运行 【走路赚钱】'
         if: env.RUNSTEP_TOKEN
         run: |
-          node xxlkxw.js
+          node pppad.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
