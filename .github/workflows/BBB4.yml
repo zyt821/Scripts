@@ -3,7 +3,7 @@ name: 步步宝4
 on:	
   workflow_dispatch:	
   schedule:	
-    - cron: '*/4 * * * *'	
+    - cron: '*/40 * * * *'	
   watch:	
     types: started	
   repository_dispatch:	
@@ -27,7 +27,7 @@ jobs:
           npm install	
       - name: '运行 【步步宝账户4】'	
         run: |	
-          node xxlbmbhlddp.js
+          node ddpad.js
         env:	  	
           JD_DEBUG: ${{ secrets.JD_DEBUG }}	
           PUSH_KEY: ${{ secrets.PUSH_KEY }}	

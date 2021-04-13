@@ -6,7 +6,7 @@ name: 笑谱
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 1'
   watch:
     types: started
   repository_dispatch:
@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【笑谱】'
         run: |
-          node xxlkxbm.js
+          node kxbm.js
         env:
           VIDEOHEADER: ${{ secrets.VIDEOHEADER }}
           VIDEOBODY: ${{ secrets.VIDEOBODY }}

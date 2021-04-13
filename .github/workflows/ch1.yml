@@ -3,7 +3,7 @@ name: 葱花视频一
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/20 0-23 * * *'
+    - cron: '*/20 0-23 * * 1'
   watch:
     types: started
   repository_dispatch:
@@ -25,7 +25,7 @@ jobs:
           npm install
       - name: '运行 【葱花视频】'
         run: |
-          node xxlbmbhlddp.js
+          node ddbm.js
         env:
           CHGETBODY_VIDEO: ${{ secrets.CHGETBODY_VIDEO }}
           CHGETBODY_SHARE: ${{ secrets.CHGETBODY_SHARE }}

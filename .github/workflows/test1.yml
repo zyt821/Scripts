@@ -3,7 +3,7 @@ name: TEST1
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/1 * * * *'
+    - cron: '*/1 * * * 4'
   watch:
     types: started
   repository_dispatch:
@@ -34,7 +34,7 @@ jobs:
           npm install
       - name: '运行 【test1】'
         run: |
-          node xxlkxpw.js
+          node kxbb.js
         env:
           SIGNHEADER: ${{ secrets.SIGNHEADER }}
           SIGNCOOKIE: ${{ secrets.SIGNCOOKIE }}

@@ -3,7 +3,7 @@ name: 步步宝
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '40 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,4 +22,4 @@ jobs:
           npm install request
       - name: '运行 【步步宝】'
         run: |   
-          node xxlkxbm.js
+          node ppbm.js
